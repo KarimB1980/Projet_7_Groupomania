@@ -1,0 +1,13 @@
+<mat-spinner *ngIf="loading"></mat-spinner>
+<ng-container *ngIf="posts$ | async as posts">
+  <p *ngIf="!loading && posts.length <= 0">
+    Aucun post à afficher
+  </p>
+  <p class="list-title" *ngIf="!loading && posts.length > 0">Les posts</p>
+  <div class="post-list" *ngIf="!loading && posts.length  > 0">
+    <div class="post-list-item" *ngFor="let post of posts" (click)="onClickPost(post._id)">
+      <img alt="Hot post bottle" [src]="post.imageUrl">
+      <h4>{{ post.description }}</h4>
+    </div>
+  </div>
+</ng-container>

@@ -1,0 +1,17 @@
+<mat-spinner *ngIf="loading"></mat-spinner>
+<form [formGroup]="signupForm" *ngIf="!loading">
+  <div class="form-group">
+    <div class="labelemail">
+      <label for="email">Adresse E-Mail</label>
+    </div>
+    <input type="email" class="form-control" id="email" formControlName="email">
+  </div>
+  <div class="form-group">
+    <div class="motdepasse">
+      <label for="password">Mot de passe</label>
+    </div>
+    <input type="password" class="form-control" id="password" formControlName="password">
+  </div>
+  <button mat-raised-button color="primary" [disabled]="signupForm.invalid" (click)="onSignup()">Enregistrement</button>
+  <p class="text-danger" *ngIf="errorMsg">{{ errorMsg }}</p>
+</form>
