@@ -11,6 +11,7 @@ export class AuthService {
   isAuth$ = new BehaviorSubject<boolean>(false);
   private authToken = '';
   private userId = '';
+  private administrator = '';
 
   constructor(private http: HttpClient,
               private router: Router) {}
@@ -27,14 +28,20 @@ export class AuthService {
     return this.userId;
   }
 
+  getUserAdministrator() {
+    return this.administrator;
+  }
+
   loginUser(email: string, password: string) {
-    return this.http.post<{ userId: string, token: string }>('http://localhost:3000/api/auth/login', {email: email, password: password}).pipe(
-      tap(({ userId, token }) => {
+    return this.http.post<{ userId: string, token: string, administrator: string }>('http://localhost:3000/api/auth/login', {email: email, password: password}).pipe(
+      tap(({ userId, token, administrator }) => {
         this.userId = userId;
         this.authToken = token;
         this.isAuth$.next(true);
+        this.administrator = administrator;
       })
     );
+
   }
 
   logout() {

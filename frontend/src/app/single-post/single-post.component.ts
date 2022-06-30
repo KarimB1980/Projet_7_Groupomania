@@ -19,6 +19,8 @@ export class SinglePostComponent implements OnInit {
   liked!: boolean;
   disliked!: boolean;
   errorMessage!: string;
+  administrator!: string;
+  administrateur !: boolean;
 
   constructor(private posts: PostsService,
     private route: ActivatedRoute,
@@ -27,6 +29,8 @@ export class SinglePostComponent implements OnInit {
 
   ngOnInit() {
     this.userId = this.auth.getUserId();
+    this.administrator = this.auth.getUserAdministrator();
+    this.administrateur = !!this.administrator;
     this.loading = true;
     this.userId = this.auth.getUserId();
     this.post$ = this.route.params.pipe(

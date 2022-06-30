@@ -18,9 +18,11 @@
       <mat-spinner class="white-spinner"></mat-spinner>
     </div>
     <div class="control-buttons">
-      <button mat-raised-button (click)="onBack()">RETOUR</button>
-      <button mat-raised-button color="primary" (click)="onModify()" *ngIf="userId === post.userId">MODIFIER</button>
-      <button mat-raised-button color="warn" (click)="onDelete()" *ngIf="userId === post.userId">SUPPRIMER</button>
+      <button mat-raised-button (click)="onBack()">Retour</button>
+      <button mat-raised-button color="primary" (click)="onModify()" *ngIf="userId === post.userId && administrateur === false">Modifier</button>
+      <button mat-raised-button color="warn" (click)="onDelete()" *ngIf="userId === post.userId && administrateur === false">Supprimer</button>
+      <button mat-raised-button color="primary" (click)="onModify()" *ngIf="administrateur === true">Modifier par ADMIN</button>
+      <button mat-raised-button color="warn" (click)="onDelete()" *ngIf="administrateur === true">Supprimer par ADMIN</button>
     </div>
   </div>
 </div>

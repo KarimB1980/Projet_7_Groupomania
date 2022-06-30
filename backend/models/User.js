@@ -5,7 +5,8 @@ const userSchema = mongoose.Schema({
     // E-Mail obligatoire et unique exigé
     email: { type: String, required: true, unique: true },
     // Mot de passe obligatoire
-    password: { type: String, required: true }
+    password: { type: String, required: true },
+    admin : false
 });
 
 userSchema.plugin(uniqueValidator);

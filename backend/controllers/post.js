@@ -45,7 +45,7 @@ exports.modifyPost = (req, res, next) => {
             imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
           }
           Post.updateOne({ _id: req.params.id }, { ...postObject, _id: req.params.id })
-            .then(() => res.status(200).json({ message: 'La post a été modifiée.' }))
+            .then(() => res.status(200).json({ message: 'La post a été modifié.' }))
             .catch(error => res.status(400).json({ error }));
         })
       })
@@ -56,7 +56,7 @@ exports.modifyPost = (req, res, next) => {
       // si absence de modification d'image
       const postObject = { ...req.body };
       Post.updateOne({ _id: req.params.id }, { ...postObject, _id: req.params.id })
-        .then(() => res.status(200).json({ message: 'La post a été modifiée.' }))
+        .then(() => res.status(200).json({ message: 'La post a été modifié.' }))
         .catch(error => res.status(400).json({ error }));
     }
 };
