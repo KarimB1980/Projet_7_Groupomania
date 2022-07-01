@@ -19,7 +19,7 @@ MONGODB_PATH = 'mongodb+srv://nom:mot_de_passe@cluster0.jukug.mongodb.net/?retry
 
 4) Dans le dossier frontend :
 - ouvrez un terminal puis tapez "npm install"
-- tapez la commande la "npm audit fix" pour corriger les vulnérabilités s'il y en a
+- tapez la commande "npm audit fix" pour corriger les vulnérabilités s'il y en a
 - lancez le frontend en tapant la commande "npm start", le message "Compiled successfully" devrait s'afficher dans le terminal
 - cliquez sur "http://localhost:4200/" pour ouvrir l'application dans votre navigateur
 
