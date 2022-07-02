@@ -3,24 +3,17 @@ form {
     max-width: 750px;
   }
 
-#email {
+#email , #password{
   border-radius: 1em;
   width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  border-left: 0;
+  border-right: 0;
+  margin-bottom: 10px;
 }
 
-#password {
-  border-radius: 1em;
-  width: 100%;
-}
-
-.labelemail {
-  border-style: double;
-  border-color:#FD2D01;
-  color: #FFD7D7;
-  background-color: #4E5166;
-}
-
-.motdepasse {
+.labelemail, .motdepasse {
   border-style: double;
   border-color:#FD2D01;
   color: #FFD7D7;
