@@ -16,9 +16,8 @@
     max-width: 200px;
     max-height: 250px;
   }
-  h4 {
+  h3 {
     margin: 0;
-    font-weight: 500;
     border-style: double;
     border-color:#FD2D01;
     color: #FFD7D7;
@@ -29,7 +28,8 @@
   }
   transition: all 0.1s ease-in-out;
   cursor: pointer;
-  &:hover {
+  &:hover,
+  &:focus {
     transform: scale(1.05);
     box-shadow: 1px 1px 20px rgba(120, 120, 120, 0.3);
   }
@@ -45,7 +45,7 @@
   background-color: #4E5166;
 }
 
-p {
+h2 {
   text-align: center;
   margin: 2em auto;
   border-style: double;

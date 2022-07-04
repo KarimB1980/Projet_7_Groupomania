@@ -19,3 +19,9 @@ form {
   color: #FFD7D7;
   background-color: #4E5166;
 }
+
+.mat-raised-button:hover,
+.mat-raised-button:focus {
+  transform: scale(1.15);
+  box-shadow: 10px 10px 10px black;
+}
