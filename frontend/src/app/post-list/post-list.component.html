@@ -6,7 +6,7 @@
   <h2 class="list-title" *ngIf="!loading && posts.length > 0">Les posts</h2>
   <div class="post-list" *ngIf="!loading && posts.length  > 0">
     <div class="post-list-item" role="button" aria-label="Post" tabindex="0" *ngFor="let post of posts" (click)="onClickPost(post._id)" (keyup.enter)= "onClickPost(post._id)">
-      <img alt="Hot post bottle" [src]="post.imageUrl">
+      <img alt="Post image posts list" [src]="post.imageUrl">
       <h3>{{ post.description }}</h3>
     </div>
   </div>
