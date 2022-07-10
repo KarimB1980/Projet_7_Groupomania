@@ -20,7 +20,7 @@ export class SinglePostComponent implements OnInit {
   disliked!: boolean;
   errorMessage!: string;
   administrator!: string;
-  administrateur !: boolean;
+  administrateur!: boolean;
 
   constructor(private posts: PostsService,
     private route: ActivatedRoute,
