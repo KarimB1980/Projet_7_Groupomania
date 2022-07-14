@@ -2,7 +2,7 @@
 <div class="post-container" *ngIf="post$ | async as post">
   <img [src]="post?.imageUrl" alt="">
   <div class="post-info">
-    <h3>Description</h3>
+    <h2>Description</h2>
     <p>{{ post.description }}</p>
     <div class="like-buttons" *ngIf="!likePending">
       <div class="likes">
